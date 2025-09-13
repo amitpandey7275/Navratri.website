@@ -512,6 +512,36 @@
 
 
 
+<!-- ==== Message & Photo Section ==== -->
+<section id="message" style="padding:30px 15px; background:#fff8f0;">
+  <h2 style="text-align:center; color:#d32f2f; margin-bottom:20px;">
+     Send photo/video to Add in the Website(only for Katri's People)
+  </h2>
+
+  <form action="https://formspree.io/f/mnqwabcd" 
+        method="POST" enctype="multipart/form-data"
+        style="max-width:450px; margin:auto; background:#fff3e0;
+               padding:20px; border-radius:15px; box-shadow:0 4px 10px rgba(0,0,0,0.2);">
+
+    <label style="font-weight:bold; color: solid rgb(254, 188, 237);">Name.................... </label>
+    <input type="text" name="username" required 
+           style="width:100%; padding:10px; margin:8px 0; border:1px solid #cccccc; border-radius:6px;">
+
+    <label style="font-weight:bold; color:rgb(43, 226, 86); "><b>Message................</b></label>
+    <textarea name="message" required rows="4"
+              style="width:100%; padding:10px; margin:8px 0; border:1px solid hsl(0, 0%, 80%); border-radius:6px;"></textarea>
+
+    
+    <input type="file" name="photo" accept="image/*" required
+           style="width:100%; padding:10px; margin:8px 0; border:1px solid #ccc; border-radius:6px;">
+
+    <button type="submit"
+            style="width:100%; margin-top:15px; background:#ff5722; color:rgb(43, 18, 5); 
+                   padding:12px; border:none; border-radius:8px; font-size:16px; font-weight:bold; cursor:pointer;">
+      send
+    </button>
+  </form>
+</section>
 
 
 
@@ -582,3 +612,4 @@
 </script>
 </body>
 </html>
+
