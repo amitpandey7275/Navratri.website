@@ -1,0 +1,849 @@
+/* ===== Global Reset ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Arial", sans-serif;
+  line-height: 1.6;
+  background: #fffdf8;
+  color: #333;
+}
+
+/* ===== Header ===== */
+/* ---------- Desktop Header ---------- */
+header {
+  background: #d32f2f;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header .logo {
+  font-size: 20px;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+header nav .nav-links {
+  list-style: none;
+  display: flex;           /* horizontal */
+  flex-direction: row;     /* line me */
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  overflow-x: auto;        /* mobile me agar jagah kam ho to scroll */
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+}
+
+header nav .nav-links li {
+  flex: 0 0 auto;
+}
+
+header nav .nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  transition: background 0.2s;
+  background: rgba(255,255,255,0.1);
+}
+
+header nav .nav-links li a:hover {
+  background: rgba(255,255,255,0.3);
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;   /* logo aur menu ek ke niche */
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    position: static; /* sticky hata diya mobile me */
+  }
+
+  header nav .nav-links {
+    justify-content: center;
+    flex-wrap: nowrap;       /* wrap na ho, line me hi chale */
+  }
+}
+
+
+
+/* ---------------- Base header & nav (replace your old header/nav CSS) ---------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ===== Hero Section ===== */
+#home {
+  position: relative;
+  width: 100%;
+  height: 70vh;
+  overflow: hidden;
+}
+#home img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#home .over {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+#home .content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  padding: 20px;
+}
+#home h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+  color: #ffd700;  /* gold color for highlight */
+  font-weight: 800; /* bold text */
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.6); /* thoda shadow for readability */
+}
+
+#home p {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #ffeb3b;  /* bright yellow for contrast */
+  font-weight: 600; /* semi-bold */
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+.btn-group {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+.btn1, .btn2 {
+  padding: 10px 18px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.btn1 {
+  background: #ff9800;
+  color: #fff;
+}
+.btn1:hover {
+  background: #e68900;
+}
+.btn2 {
+  background: #fff;
+  color: #d32f2f;
+}
+.btn2:hover {
+  background: #ffe6e6;
+}
+
+
+
+
+
+
+
+
+
+
+/* Mobile version */
+@media (max-width: 768px) {
+  #home {
+    height: 40vh; /* overall section chhota */
+  }
+
+  #home img {
+    height: 40vh; /* image bhi chhoti */
+  }
+
+  #home h1 {
+    font-size: 24px; /* heading chhoti */
+  }
+
+  #home p {
+    font-size: 14px; /* paragraph chhota */
+  }
+
+  .btn-group {
+    flex-direction: column; /* buttons vertical ho jaye */
+    gap: 10px;
+  }
+
+  .btn1, .btn2 {
+    padding: 8px 14px; /* buttons chhote */
+    font-size: 14px;
+  }
+}
+
+
+
+
+
+
+/* ===== About + History (2-column layout) ===== */
+.wrap {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+}
+.card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+.card h2 {
+  color: #d32f2f;
+  margin-bottom: 10px;
+}
+.card p {
+  margin-bottom: 16px;
+  text-align: justify;
+}
+.IFC {
+  background: #fff3e0;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+.poem .line1 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  text-align: center;
+  color: #d32f2f;
+}
+.poem .line {
+  font-size: 16px;
+  margin-bottom: 12px;
+  line-height: 1.6;
+  text-align: center;
+  background: #fff;
+  padding: 8px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+/* ===== Responsive (Mobile) ===== */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    gap: 10px;
+  }
+  header nav ul {
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+  }
+  #home h1 {
+    font-size: 22px;
+  }
+  #home p {
+    font-size: 14px;
+  }
+  .grid {
+    grid-template-columns: 1fr;  /* single column in mobile */
+  }
+  
+
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ===== Important Dates Box ===== */
+.IP {
+  max-width: 900px;
+  margin: 20px auto;
+  background: #fffdf8;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  font-family: "Arial", sans-serif;
+  overflow: hidden;
+}
+
+/* ===== Heading ===== */
+.heading {
+  background: #d32f2f;
+  color: #fff;
+  padding: 15px;
+  text-align: center;
+}
+.heading .title {
+  font-size: 26px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* ===== Header Row ===== */
+.vipin {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;  /* 4 columns for desktop */
+  background: #ffccbc;
+  font-weight: bold;
+  padding: 12px;
+  text-align: center;
+  font-size: 16px;
+}
+
+/* ===== Data Rows ===== */
+.mohit {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;  /* 4 columns for desktop */
+  border-bottom: 1px solid #ddd;
+  padding: 12px;
+  text-align: center;
+  align-items: center;
+  font-size: 15px;
+}
+
+/* Alternate Row Color */
+.mohit:nth-child(even) {
+  background: #fff3e0;
+}
+
+/* ===== Day Badge (highlight day names) ===== */
+.day-badge {
+  background: #ff5722;
+  color: #fff;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 768px) {
+  .vipin {
+    display: none;   /* hide header row in mobile */
+  }
+
+  .mohit {
+    grid-template-columns: 1fr 1fr;  /* 2 columns in mobile */
+    text-align: left;
+    padding: 10px;
+    border: 1px solid #eee;
+    margin-bottom: 8px;
+    border-radius: 8px;
+  }
+
+  .mohit div {
+    padding: 4px 0;
+  }
+
+  /* show label before each item */
+  .mohit div:nth-child(1)::before { content: "Day: "; font-weight: bold; color: #444; }
+  .mohit div:nth-child(2)::before { content: "Date: "; font-weight: bold; color: #444; }
+  .mohit div:nth-child(3)::before { content: "Time: "; font-weight: bold; color: #444; }
+  .mohit div:nth-child(4)::before { content: "Action: "; font-weight: bold; color: #444; }
+}
+
+
+
+
+
+
+
+
+/* Navadurga cards */
+.navadurga-section {
+  background: #fffdf8;
+  padding: 30px 16px;
+}
+.navadurga-section .container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.section-head h2 {
+  text-align: center;
+  color: #d3d02f;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+/* grid of cards */
+.manju {
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+  margin-bottom: 18px;
+  padding: 14px;
+  overflow: hidden;
+}
+.manju h3 {
+  color: #b71c1c;
+  margin-bottom: 10px;
+}
+
+/* layout inside each card: image + text side-by-side on desktop */
+.manju-body {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 12px;
+  align-items: start;
+}
+.manju-body figure {
+  margin: 0;
+  text-align: center;
+}
+.manju-body img {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+  margin: 0 auto;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+.manju-body figcaption {
+  font-size: 13px;
+  color: #555;
+  margin-top: 6px;
+}
+.manju .text p {
+  margin-bottom: 10px;
+  text-align: justify;
+}
+
+/* shlok style */
+.shlok {
+  font-style: italic;
+  background: #fff8e6;
+  padding: 8px;
+  border-radius: 6px;
+  border-left: 3px solid #ffd54f;
+}
+
+/* Responsive: stack on small screens */
+@media (max-width: 768px) {
+  .manju-body {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .manju .text p { text-align: center; }
+  .manju-body img {
+    width: 160px;
+    height: 160px;
+    margin: 0 auto 8px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#donate {
+  padding: 30px;
+  text-align: center;
+  background: #fff3e0; /* हल्का orange background */
+  margin-bottom: 30px;
+  border-radius: 15px;
+}
+
+#donate h2 {
+  margin-bottom: 20px;
+  color: #d32f2f; /* लाल */
+}
+
+.qr-box {
+  display: inline-block;
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+}
+
+.qr-box img {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.qr-box p {
+  margin: 0;
+  font-weight: bold;
+  color: #333;
+}
+
+/* 📱 Mobile responsive */
+@media (max-width: 480px) {
+  .qr-box img {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+
+
+
+
+
+
+
+
+#cont {
+  padding: 30px;
+  background: #f5f5f5;
+  text-align: center;
+}
+
+#cont h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+#conta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+#conta .cardss {
+  width: 200px;
+  background: white;
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+#conta img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;   /* image circle */
+  margin-bottom: 10px;
+}
+
+/* 📱 Mobile: 2 cards per row */
+@media (max-width: 768px) {
+  #conta {
+    justify-content: space-around;  /* space बराबर बटे */
+  }
+  #conta .cardss {
+    width: 45%;   /* 2 cards ek row me */
+  }
+}
+
+/* बहुत छोटे screen (extra small phones) पर: 1 card per row */
+@media (max-width: 480px) {
+  #conta .card {
+    width: 90%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer{
+              flex-shrink:0; /* don't collapse */
+              border-top: 1px solid var(--border);
+              background: #fff;
+              padding: 18px 16px;
+              text-align:center;
+            }
+
+    .main {
+      font-size: 25px;
+      font-weight:600;
+      margin:2px 0;
+      color: hsl(0, 0%, 13%);
+      letter-spacing:0.3px;
+    }
+
+    .sub {
+      font-size:35px;
+      color:darkcyan;
+      margin:6px 0 0;
+      display:flex;
+      gap:10px;
+      align-items:center;
+      justify-content:center;
+      flex-wrap:wrap;
+    }
+
+   
+     /* Responsive tweaks */
+    @media (max-width:420px){
+      .footer-main{ font-size:16px }
+      .footer-sub{ font-size:12px }
+      .footer-deco{ padding:5px 12px; font-size:12px }
+    }
+
+
+
+
+ 
+
+
+.main {
+  font-size: 25px;
+  font-weight: 600;
+  margin: 2px 0;
+  color: hsl(0, 0%, 13%);
+  letter-spacing: 0.3px;
+}
+
+.sub {
+  font-size: 15px;
+  color: #ff0000;
+  margin: 6px 0 0;
+}
+
+.socialmedia {
+  display: flex;
+  justify-content: center;   /* center me lane ke liye */
+  gap: 14px;
+  margin-top: 12px;          /* thoda gap */
+}
+
+.social-btn {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #666;
+  color: white;
+  text-decoration: none;
+  transition: transform .2s, box-shadow .2s;
+}
+
+.social-btn svg {
+  width: 22px;
+  height: 22px;
+  fill: white;
+}
+
+.social-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
